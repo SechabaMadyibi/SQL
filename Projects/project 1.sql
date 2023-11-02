@@ -43,5 +43,17 @@ values
 (5, '120 000 or more');
 
 
+--left join department name, job title, salary figure and overtime hours
+SELECT first_name, surname, depart_name, role, salary_pa, overtime_hours
+From employees_project LEFT JOIN department_project 
+ ON employees_project.depart_id = department_project.depart_id
+ LEFT JOIN roles 
+ ON employees_project.role_id = roles.role_id
+ LEFT JOIN salaries 
+ ON employees_project.salary_id = salaries.salary_id
+ LEFT JOIN overtime_hours 
+ ON employees_project.overtime_id =overtime_hours.overtime_id
+
+
 
 
