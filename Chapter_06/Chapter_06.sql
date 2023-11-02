@@ -30,7 +30,7 @@ VALUES
     ('Tax', 'Atlanta'),
     ('IT', 'Boston');
 
-INSERT INTO employees (first_name, last_name, salary, dept_id)
+INSERT INTO employees  (first_name, last_name, salary, dept_id)
 VALUES
     ('Nancy', 'Jones', 62500, 1),
     ('Lee', 'Smith', 59300, 1),
