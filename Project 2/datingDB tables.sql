@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS public.my_contacts
     last_name text NOT NULL,
     first_name text NOT NULL,
     phone bigint,
-    email bigint,
+    email text,
     gender text,
     birthday date,
     prof_id bigint,
@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS public.my_contacts
 
 CREATE TABLE IF NOT EXISTS public.profession
 (
-    profession_id bigserial NOT NULL,
+    prof_id bigserial NOT NULL,
     profession text NOT NULL,
-    PRIMARY KEY (profession_id),
+    PRIMARY KEY (prof_id),
     CONSTRAINT professions UNIQUE (profession)
 );
 
