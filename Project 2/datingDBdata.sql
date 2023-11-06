@@ -70,7 +70,7 @@ VALUES
     ('Vaughan', 'Keith', 0847572053 ,'keith@gmail.com','female','1994-03-13', 3,2330,1);
 
 
-INSERT INTO contact_interest (contact_id,interest_id)
+INSERT INTO contact_interest (contact_id,interest_id,interest_id)
 VALUES 
 (1,3),
 (2,6),
