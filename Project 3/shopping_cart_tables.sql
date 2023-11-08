@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS public.users_table
 );
 
 ALTER TABLE IF EXISTS public.cart_table
-    ADD CONSTRAINT product_id FOREIGN KEY (product_id)
+    ADD CONSTRAINT product_id FOREIGN KEY (product_id) ;
     REFERENCES public.products_menu_table (id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
@@ -51,7 +51,7 @@ CREATE INDEX IF NOT EXISTS cart_table_pkey
 
 
 ALTER TABLE IF EXISTS public.order_details
-    ADD CONSTRAINT order_id FOREIGN KEY (order_id)
+    ADD CONSTRAINT order_id FOREIGN KEY (order_id) 
     REFERENCES public.order_header (order_id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
@@ -61,7 +61,7 @@ CREATE INDEX IF NOT EXISTS order_details_pkey
 
 
 ALTER TABLE IF EXISTS public.order_details
-    ADD CONSTRAINT product_id FOREIGN KEY (product_id)
+    ADD CONSTRAINT product_id FOREIGN KEY (product_id) 
     REFERENCES public.cart_table (product_id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
